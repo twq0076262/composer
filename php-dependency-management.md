@@ -1,8 +1,5 @@
 # Composer PHP依赖管理的新时代
 
-</header>
-
-<section class="panel-body post-body">
 对于现代语言而言，包管理器基本上是标配。Java有Maven，Python有pip，Ruby有gem，Nodejs有npm。PHP的则是[PEAR](http://pear.php.net/)，不过PEAR坑不少：
 
 *   依赖处理容易出问题
