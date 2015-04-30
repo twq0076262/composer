@@ -10,8 +10,7 @@ Composer是 PHP 用来管理依赖（dependency）关系的工具。你可以在
 |----------|--------------------
 |2015-04-30|Composer 中文版 
 
-
-# PHP 开发者该知道的 5 个 Composer 小技巧
+## PHP 开发者该知道的 5 个 Composer 小技巧
 
 Composer 是新一代的PHP依赖管理工具。其介绍和基本用法可以看这篇《[Composer PHP依赖管理的新时代](php-dependency-management.md)》。本文介绍使用Composer的五个小技巧，希望能给你的PHP开发带来方便。
 
