@@ -1,0 +1,7 @@
+{
+    "name": "Composer 中文版",
+    "introduction": "Composer是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。",
+    "title": "Composer 中文版- 极客学院 Wiki",
+    "keywords": "Composer 中文版,Composer,PHP工具,Composer镜像,Composer avid,Composer 安装,Composerapi",
+    "description": "Composer是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。"
+}
