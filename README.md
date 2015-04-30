@@ -2,7 +2,7 @@
 
 Composer是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。
 
-本教程部分内容来源于 [Composer 中文网](http://www.phpcomposer.com/)
+本教程内容来源于 [Composer 中文网](http://www.phpcomposer.com/)
 
 英文官网Fresco：<https://getcomposer.org/>
 
@@ -10,11 +10,9 @@ Composer是 PHP 用来管理依赖（dependency）关系的工具。你可以在
 |----------|--------------------
 |2015-04-30|Composer 中文版 
 
+
 # PHP 开发者该知道的 5 个 Composer 小技巧
 
-</header>
-
-<section class="panel-body post-body">
 Composer 是新一代的PHP依赖管理工具。其介绍和基本用法可以看这篇《[Composer PHP依赖管理的新时代](php-dependency-management.md)》。本文介绍使用Composer的五个小技巧，希望能给你的PHP开发带来方便。
 
 ## 1\. 仅更新单个库
@@ -139,115 +137,3 @@ dist包也可以用于诸如`dev-master`之类的分支，Github允许你下载�
 
 原文地址：[5 features to know about Composer PHP](http://moquet.net/blog/5-features-about-composer-php/)   
 译文地址：[PHP 开发者该知道的 5 个 Composer 小技巧](http://segmentfault.com/a/1190000000355928)
-
-</section>
-
-</article>
-
-<article class="panel post tag-composer tag-php">
-<header class="panel-heading post-header">
-# [Composer PHP依赖管理的新时代](php-dependency-management.md)
-
-对于现代语言而言，包管理器基本上是标配。Java有Maven，Python有pip，Ruby有gem，Nodejs有npm。PHP的则是[PEAR](http://pear.php.net/)，不过PEAR坑不少：
-
-*   依赖处理容易出问题
-*   配置非常复杂
-*   难用的命令行接口
-
-好在我们有[Composer](http://getcomposer.org/)，PHP依赖管理的利器。它是开源的，使用起来也很简单，提交自己的包也很容易。
-
-## 安装Composer
-
-Composer需要PHP 5.3.2+才能运行。
-
-    $ curl -sS https://getcomposer.org/installer | php
-
-这个命令会将`composer.phar`下载到当前目录。PHAR（PHP 压缩包）是一个压缩格式，可以在命令行下直接运行。
-
-你可以使用`--install-dir`选项将Composer安装到指定的目录，例如：
-
-    $ curl -sS https://getcomposer.org/installer | php -- --install-dir=bin
-
-当然也可以进行全局安装：
-
-    $ curl -sS https://getcomposer.org/installer | php
-    $ mv composer.phar /usr/local/bin/composer
-
-在Mac OS X下也可以使用homebrew安装：
-
-    brew tap josegonzalez/homebrew-php  
-    brew install josegonzalez/php/composer  
-
-不过通常情况下只需将`composer.phar`的位置加入到`PATH`环境变量就可以，不一定要全局安装。
-
-## 声明依赖
-
-在项目目录下创建一个`composer.json`文件，指明依赖，比如，你的项目依赖 [monolog](https://github.com/Seldaek/monolog)：
-
-    {
-        "require": {
-            "monolog/monolog": "1.2.*"
-        }
-    }
-
-## 安装依赖
-
-安装依赖非常简单，只需在项目目录下运行：
-
-    composer install  
-
-如果没有全局安装的话，则运行：
-
-    php composer.phar install  
-
-## 自动加载
-
-Composer提供了自动加载的特性，只需在你的代码的初始化部分中加入下面一行：
-
-    require 'vendor/autoload.php';  
-
-## 模块仓库
-
-[packagist.org](https://packagist.org/)是Composer的仓库，很多著名的PHP库都能在其中找到。你也可以[提交你自己的作品](https://packagist.org/packages/submit)。
-
-## 高级特性
-
-以上介绍了Composer 的基本用法。Composer还有一些[高级特性](/5-features-to-know-about-composer-php)，虽然不是必需的，但是往往能给PHP开发带来方便。
-
-项目主页
-
-更多信息请访问 [Composer 的官方主页](http://getcomposer.org/)或者[中文站点](http://www.phpcomposer.com/)。
-
-* * *
-
-原文地址：[Composer PHP依赖管理的新时代](http://segmentfault.com/a/1190000000353129)
-
-</section>
-
-</article>
-
-<article class="panel post tag-composer tag-php">
-<header class="panel-heading post-header">
-# [Composer 是什么](/what-is-composer/)
-
-</header>
-
-<section class="panel-body post-body">
-简单来说，Composer 是一个新的安装包管理工具，服务于 PHP 生态系统。它实际上包含了两个部分：[Composer](https://github.com/composer/composer) 和 [Packagist](http://packagist.org/).下面我们就简单说一下他们各自的用途。
-
-## Composer
-
-Composer 是由 Jordi Boggiano 和 Nils Aderman 创造的一个命令行工具，它的使命就是帮你为项目自动安装所依赖的开发包。Composer 中的很多理念都借鉴了 npm 和 Bundler，如果你对这两个工具有所了解的话，就会在 composer 中发现他们的身影。Composer 包含了一个依赖解析器，用来处理开发包之间复杂的依赖关系；另外，它还包含了下载器、安装器等有趣的东西。
-
-作为一个用户，你所要做的就是在 `composer.json` 文件中声明当前项目所依赖的开发包，然后运行 `composer.phar install` 就行了。`composer.json` 文件定义了当前项目所依赖的开发包和 composer 的配置信息。下面是一个小型实例：
-
-    {
-        "require": {
-            "monolog/monolog": "1.2.*"
-        }
-    }
-
-## Packagist
-
-Packagist 是 Composer 的默认的开发包仓库。你可以将自己的安装包提交到 packagist，将来你在自己的 VCS （源码管理软件，比如 Github） 仓库中新建了 tag 或更新了代码，packagist 都会自动构建一个新的开发包。这就是 packagist 目前的运作方式，将来 packagist 将允许直接上传开发包。
-
