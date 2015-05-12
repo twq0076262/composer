@@ -4,7 +4,7 @@ Composer是 PHP 用来管理依赖（dependency）关系的工具。你可以在
 
 本教程内容来源于 [Composer 中文网](http://www.phpcomposer.com/)
 
-英文官网Fresco：<https://getcomposer.org/>
+英文官网：<https://getcomposer.org/>
 
 |更新日期    |更新内容
 |----------|--------------------
